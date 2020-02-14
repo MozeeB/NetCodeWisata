@@ -25,6 +25,7 @@ class DetailFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        val name  = arguments?.getString("name")
 
     }
 

@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface RemoteService {
 
-    @GET("/?action=findAll")
+    @GET("?action=findAll")
     suspend fun getPosts(): Response<TopWisataResponse>
 }

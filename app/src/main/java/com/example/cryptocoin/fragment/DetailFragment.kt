@@ -25,7 +25,11 @@ class DetailFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        //nerima dari fragment ke fragment
         val name  = arguments?.getString("name")
+
+        //nerima data dari fragment ke activity
+        val nama = activity?.intent?.extras?.getString("name")
 
     }
 

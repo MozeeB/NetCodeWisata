@@ -18,7 +18,7 @@ class WisataItemView(private val wisataModel: WisataModel) : Item() {
 
         viewHolder.itemView.setOnClickListener{
             val bundle = bundleOf("name" to name_wisata)
-            it.findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
+            it.findNavController().navigate(R.id.action_homeFragment_to_detailFragment, bundle)
         }
     }
 

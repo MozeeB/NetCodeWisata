@@ -52,6 +52,7 @@ class HomeFragment : Fragment() {
                 try {
                     if (response.isSuccessful) {
                         //Do something with response e.g show to the UI.
+                        adapterWisata.clear()
                         response.body()?.data?.map {
                             adapterWisata.add(WisataItemView(it))
                         }

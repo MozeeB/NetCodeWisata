@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.cryptocoin.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_detail.*
 
 /**
  * A simple [Fragment] subclass.
@@ -26,10 +28,19 @@ class DetailFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         //nerima dari fragment ke fragment
-        val name  = arguments?.getString("name")
+        val name  = arguments?.getString("nama")
+        val location = arguments?.getString("location")
+        val gambar  = arguments?.getString("gambar")
+        val deskripsi = arguments?.getString("deskripsi")
 
-        //nerima data dari fragment ke activity
-        val nama = activity?.intent?.extras?.getString("name")
+//        //nerima data dari fragment ke activity
+//        val nama = activity?.intent?.extras?.getString("name")
+        detailNamaTV.text = name
+        detailLocationTV.text = location
+        detailDescriptionTV.text = deskripsi
+        Picasso.get().load(gambar.toString()).into(detailIV)
+
+
 
     }
 
